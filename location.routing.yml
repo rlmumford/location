@@ -1,3 +1,10 @@
+entity.location.collection:
+  path: '/admin/content/location'
+  defaults:
+    _entity_list: 'location'
+    _title: 'Locations'
+  requirements:
+    _permission: 'administer locations'
 entity.location_type.collection:
   path: '/admin/structure/location_types'
   defaults:

@@ -90,4 +90,13 @@ class LocationTypeForm extends BundleEntityFormBase {
       $form_state->setRedirectUrl($route_info);
     }
   }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function delete(array $form, FormStateInterface $form_state) {
+    $form_state->setRedirect('entity.location_type.delete_form', [
+      'location_type' => $this->entity->id(),
+      ]);
+  }
 }

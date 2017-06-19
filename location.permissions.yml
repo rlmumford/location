@@ -1,3 +1,6 @@
+administer locations:
+  title: 'Administer locations'
+  restrict access: true
 administer location types:
   title: 'Administer location types'
   restrict access: true
