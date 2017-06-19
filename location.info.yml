@@ -1,0 +1,7 @@
+type: module
+name: Location
+description: 'Manage Locations'
+package: RobTools
+core: 8.x
+dependencies:
+  - address

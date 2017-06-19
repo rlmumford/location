@@ -1,0 +1,16 @@
+location.type.*:
+  type: config_entity
+  label: 'Location Type Settings'
+  mapping:
+    id:
+      type: string
+      label: 'Machine-readable name'
+    uuid:
+      type: string
+      label: 'UUID'
+    label:
+      type: label
+      label: 'Label'
+    reusable:
+      type: boolean
+      label: 'Reusable'

@@ -1,0 +1,14 @@
+entity.location_type.collection:
+  path: '/admin/structure/location_types'
+  defaults:
+    _entity_list: 'location_type'
+    _title: 'Location types'
+  requirements:
+    _permission: 'administer location types'
+entity.location_type.add_form:
+  path: '/admin/structure/location_types/add'
+  defaults:
+    _entity_form: location_type.add
+    _title: 'Add'
+  requirements:
+    _permission: 'administer location types'

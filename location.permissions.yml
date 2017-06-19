@@ -1,0 +1,3 @@
+administer location types:
+  title: 'Administer location types'
+  restrict access: true
