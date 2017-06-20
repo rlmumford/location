@@ -33,8 +33,8 @@ use Drupal\Core\Enttiy\EntityStorageInterface;
  *   config_export = {
  *     "id",
  *     "label",
- *     "default_label",
- *     "default_uri",
+ *     "reusable",
+ *     "has_address",
  *   },
  *   links = {
  *     "add-form" = "/admin/structure/location_types/add",
@@ -75,4 +75,26 @@ class LocationType extends ConfigEntityBundleBase {
    */
   protected $reusable;
 
+  /**
+   * Whether or not the location has an address.
+   *
+   * @var boolean
+   */
+  protected $has_address;
+
+  /**
+   * Return whether or not this is a reusable type.
+   *
+   * @return boolean
+   */
+  public function isReusable() {
+    return !empty($this->reusable);
+  }
+
+  /**
+   * Return whether or not this type has an address.
+   */
+  public function hasAddress() {
+    return !empty($this->has_address);
+  }
 }

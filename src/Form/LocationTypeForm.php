@@ -49,6 +49,11 @@ class LocationTypeForm extends BundleEntityFormBase {
       '#title' => $this->t('Locations of this type are reusable'),
       '#description' => $this->t('Reusable location can be used multiple times but cannot be edited by the field widget'),
     ];
+    $form['has_address'] = [
+      '#type' => 'checkbox',
+      '#default_value' => $type->hasAddress(),
+      '#title' => $this->t('Locations of this type have a physical address'),
+    ];
 
     return $this->protectBundleIdElement($form);
   }

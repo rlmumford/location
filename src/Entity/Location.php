@@ -111,4 +111,29 @@ class Location extends ContentEntityBase implements LocationInterface {
 
     return $fields;
   }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function bundleFieldDefinitions(EntityTypeInterface $entity_type, $bundle, array $base_field_definitions) {
+    $fields = [];
+    $type = LocationType::load($bundle);
+    if ($type->hasAddress()) {
+      $fields['address'] = BaseFieldDefinition::create('address')
+        ->setLabel(t('Address'))
+        ->setDescription(t('The physical address of this location.'))
+        ->setRevisionable(TRUE)
+        ->setDisplayOptions('form', [
+          'type' => 'address_default',
+          'weight' => 5,
+        ])
+        ->setDisaplyOptions('view', [
+          'type' => 'address_default',
+          'weight' => 5,
+        ])
+        ->setDisplayConfigurable('form', TRUE)
+        ->setDisplayConfigurably('view', TRUE);
+    }
+    return $fields;
+  }
 }
