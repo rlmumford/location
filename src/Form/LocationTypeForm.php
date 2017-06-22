@@ -5,6 +5,7 @@ namespace Drupal\location\Form;
 use Drupal\Core\Entity\BundleEntityFormBase;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\field_ui\FieldUI;
 
 /**
  * Form controller for location type forms.

@@ -1,0 +1,5 @@
+entity.location_type.collection:
+  title: 'Location types'
+  parent: system.admin_structure
+  description: 'Create and manage location types.'
+  route_name: entity.location_type.collection

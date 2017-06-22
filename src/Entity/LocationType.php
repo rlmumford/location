@@ -14,10 +14,10 @@ use Drupal\Core\Enttiy\EntityStorageInterface;
  *   handlers = {
  *     "list_builder" = "Drupal\location\LocationTypeListBuilder",
  *     "form" = {
- *       "default" = "Drupal\location\LocationTypeForm",
- *       "add" = "Drupal\location\LocationTypeForm",
- *       "edit" = "Drupal\location\LocationTypeForm",
- *       "delete" = "Drupal\location\LocationTypeDeleteForm",
+ *       "add" = "Drupal\location\Form\LocationTypeForm",
+ *       "edit" = "Drupal\location\Form\LocationTypeForm",
+ *       "delete" = "Drupal\location\Form\LocationTypeDeleteForm",
+ *       "default" = "Drupal\location\Form\LocationTypeForm",
  *     },
  *     "route_provider" = {
  *       "html" = "Drupal\Core\Entity\Routing\DefaultHtmlRouteProvider",

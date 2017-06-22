@@ -1,0 +1,6 @@
+location.type_add:
+  route_name: entity.location_type.add_form
+  title: 'Add location type'
+  weight: 1
+  appears_on:
+    - entity.location_type.collection

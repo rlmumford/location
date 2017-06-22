@@ -3,8 +3,9 @@
 namespace Drupal\location\Entity;
 
 use Drupal\Core\Entity\ContentEntityBase;
-use Drupal\Core\Entity\EntityChangedTrait
+use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
 
 /**
  * Define the location entity type.
@@ -14,7 +15,7 @@ use Drupal\Core\Entity\EntityTypeInterface;
  *   label = @Translation("Location"),
  *   label_singular = @Translation("location"),
  *   label_plural = @Translation("locations"),
- *   label_count = @Translation(
+ *   label_count = @PluralTranslation(
  *     singular = "a location",
  *     plural = "@count locations",
  *   ),
@@ -127,12 +128,12 @@ class Location extends ContentEntityBase implements LocationInterface {
           'type' => 'address_default',
           'weight' => 5,
         ])
-        ->setDisaplyOptions('view', [
+        ->setDisplayOptions('view', [
           'type' => 'address_default',
           'weight' => 5,
         ])
         ->setDisplayConfigurable('form', TRUE)
-        ->setDisplayConfigurably('view', TRUE);
+        ->setDisplayConfigurable('view', TRUE);
     }
     return $fields;
   }
