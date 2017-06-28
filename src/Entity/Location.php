@@ -124,9 +124,30 @@ class Location extends ContentEntityBase implements LocationInterface {
         ->setLabel(t('Address'))
         ->setDescription(t('The physical address of this location.'))
         ->setRevisionable(TRUE)
+        ->setSettings([
+          'available_countries' => [
+            'GB' => 'GB',
+          ],
+          'fields' => [
+            'administrativeArea' => 'administrativeArea',
+            'locality' => 'locality',
+            'dependentLocality' => 'dependentLocality',
+            'postalCode' => 'postalCode',
+            'addressLine1' => 'addressLine1',
+            'addressLine2' => 'addressLine2',
+            'sortingCode' => '0',
+            'organization' => '0',
+            'givenName' => '0',
+            'additionalName' => '0',
+            'familyName' => '0',
+          ],
+        ])
         ->setDisplayOptions('form', [
           'type' => 'address_default',
           'weight' => 5,
+          'settings' => [
+            'default_country' => 'GB',
+          ],
         ])
         ->setDisplayOptions('view', [
           'type' => 'address_default',

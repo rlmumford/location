@@ -12,4 +12,11 @@ use Drupal\Core\Entity\EntityAccessControlHandler;
  * @see \Drupal\location\Entity\Location
  */
 class LocationAccessControlHandler extends EntityAccessControlHandler {
+
+  /**
+   * {@inheritdoc}
+   */
+  public function checkCreateAccess(AccountInterface $account, array $context, $entity_bundle = NULL) {
+    return AccessResult::allowed();
+  }
 }
